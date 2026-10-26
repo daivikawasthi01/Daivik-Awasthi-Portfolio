@@ -5,6 +5,20 @@ Personal portfolio built with Next.js 16, React 19 and Tailwind CSS 4. It has tw
 - **Ask bot:** a chat widget that answers questions about me from my own content, using retrieval and Groq.
 - **Blog:** daily engineering posts written by an AI pipeline under a strict style guide, with automatic checks before anything is published.
 
+## Features
+
+- **Retrieval-based Ask bot**: answers visitor questions using only the site's own content, embedded locally and matched before anything is sent to Groq; refuses if nothing matches.
+- **Automated AI blog pipeline**: a scheduled GitHub Action picks a trending topic, drafts a post against a style guide, runs rule-based and AI review passes, and only commits it if it passes; each post carries an AI-disclosure notice.
+- **Live GitHub project stats** on the home page.
+- **Content-driven site**: all copy lives in `content/*.ts`, so the page, Ask bot, and blog all pick up edits from one place.
+
+## Tech Stack
+
+- Next.js 16, React 19, TypeScript, Tailwind CSS 4
+- Groq (LLM) for the Ask bot and the blog pipeline
+- A local embedding model for retrieval (no external vector DB)
+- Deployed on Vercel
+
 ## Getting started
 
 ```bash
